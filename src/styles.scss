@@ -1,1 +1,108 @@
 /* You can add global styles to this file, and also import other style files */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+section {
+  margin: 20px 10px;
+}
+
+header {
+  border-bottom: 2px solid #3498db;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+
+  h1 {
+    color: #3498db;
+    font-size: 2em;
+    margin: 0;
+  }
+
+  p {
+    color: #2ecc71;
+    font-size: 1.2em;
+    margin: 10px 0 0;
+  }
+}
+
+article {
+  margin-bottom: 20px;
+
+  p {
+    background-color: #f0f0f0;
+    border-left: 5px solid #3498db;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 0 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+
+  &:active {
+    background-color: #003f7f;
+    transform: scale(1);
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+}
