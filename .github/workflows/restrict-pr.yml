@@ -1,0 +1,19 @@
+name: Restrict PR to main from non-release branches
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  restrict-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check if PR is from a release branch
+        if: startsWith(github.head_ref, 'release/')
+        run: echo "Valid PR - branch starts with 'release/'"
+      - name: Fail if PR is not from a release branch
+        if: "!startsWith(github.head_ref, 'release/')"
+        run: |
+          echo "Invalid PR - branch does not start with 'release/'"
+          exit 1
