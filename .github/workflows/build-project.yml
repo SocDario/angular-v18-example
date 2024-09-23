@@ -1,0 +1,28 @@
+name: Build Project
+
+on:
+  workflow_call:
+    inputs:
+      environment:
+        description: 'The environment to build for'
+        required: true
+        type: string
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build the app
+      run: |
+        if [ "${{ inputs.environment }}" == "production" ]; then
+          npm run build --prod
+        else
+          npm run build
+        fi
