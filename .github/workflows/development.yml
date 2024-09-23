@@ -1,0 +1,12 @@
+name: Deploy to Development
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build-and-deploy:
+    uses: ./.github/workflows/build-project.yml
+    with:
+      environment: development
