@@ -1,0 +1,18 @@
+name: 'Assign PR to person who created it'
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+
+permissions:
+  pull-requests: write
+
+jobs:
+  asssign_pr:
+    name: 'Assign PR to person who created it'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Assign PR to person who created it'
+        uses: itsOliverBott/assign-pr-author-as-assignee@latest
