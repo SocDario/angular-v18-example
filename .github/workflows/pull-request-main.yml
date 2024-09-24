@@ -1,0 +1,12 @@
+name: Pull request - main
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-project:
+    uses: ./.github/workflows/build-project.yml
+    with:
+      environment: production
