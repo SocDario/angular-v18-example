@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-project:
+  pull-request-main:
     uses: ./.github/workflows/build-project.yml
     with:
       environment: production
