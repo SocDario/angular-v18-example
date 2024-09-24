@@ -6,7 +6,7 @@ on:
       - develop
 
 jobs:
-  build-and-deploy:
+  pull-request-develop:
     uses: ./.github/workflows/build-project.yml
     with:
       environment: development
