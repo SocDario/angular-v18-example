@@ -29,3 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Test develop branch CI/CD
 
 We are currently testing on PR opened CI/CD for develop branch
+
+## We are adding new feature
+
+We are now adding new feature to development branch
