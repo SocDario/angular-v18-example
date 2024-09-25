@@ -7,6 +7,7 @@ on:
 
 jobs:
   pull-request-develop:
+    name: Pull request - Development
     uses: ./.github/workflows/build-project.yml
     with:
       environment: development
