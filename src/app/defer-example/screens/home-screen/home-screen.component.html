@@ -4,21 +4,39 @@
 </header>
 
 <div class="button-wrapper">
-  <button>Show more</button>
-  <button>Prefetch</button>
+  <button #showMore (click)="isComponentVisible.set(true)">Shown more</button>
+  <button (click)="shouldPrefetch.set(true)">Prefetch</button>
 </div>
 
 <!-- 1. example -->
 <!-- <section>
+  @defer (on timer(2s)) {
   <app-heavy-component></app-heavy-component>
+  } @placeholder {
+  <span>Placeholder 1</span>
+  } @loading (minimum 2s) {
+  <span> Loading ... </span>
+  }
 </section> -->
 
 <!-- 2. example -->
 <!-- <section>
+  @defer (on interaction(trigger), hover) {
   <app-heavy-component></app-heavy-component>
+  } @placeholder {
+  <span>Placeholder 2</span>
+  } @loading {
+  <span>Loading ...</span>
+  }
 </section> -->
 
 <!-- 3. example -->
 <!-- <section>
+  @defer (when isComponentVisible(); prefetch when shouldPrefetch()) {
   <app-heavy-component></app-heavy-component>
+  } @placeholder {
+  <span>Placeholder 3</span>
+  } @loading {
+  <span>Loading ...</span>
+  }
 </section> -->
