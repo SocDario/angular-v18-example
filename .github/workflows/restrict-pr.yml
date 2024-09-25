@@ -7,6 +7,7 @@ on:
 
 jobs:
   restrict-pr:
+    name: Restrict PR to main from non-release branches
     runs-on: ubuntu-latest
     steps:
       - name: Check if PR is from a release branch
